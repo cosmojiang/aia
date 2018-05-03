@@ -8,15 +8,17 @@ Please follow the official installation guideline or the page here https://linux
 **NVIDIA driver installation**
 Check available version of NVIDIA drivers and install a proper version (I used the 390). 
 ```shell
-ubuntu-drivers devices
-sudo apt install nvidia-driver-390
+$ ubuntu-drivers devices
+$ sudo apt install nvidia-driver-390
 ```
 Reboot your computer (very important) and check your driver version
 ```shell
-nvidia-smi
+$ nvidia-smi
 ```
 You should see information like this.
-
+<p align="left">
+  <img src="doc/img/nvidia_driver.png" width=140 height=195>
+</p>
 
 **CUDA9 installation**
 Unlike the post, I successfully installed the CUDA9 using the deb file, which is somehow more straightforward than runfile.
@@ -26,10 +28,10 @@ Download the CUDA9 toolkit and update patches (for Ubuntu 17.04) throught the of
 After downloading, direct to the folder where you save those files.
 Use the following commands to install the CUDA9 toolkit
 ```shell
-sudo dpkg -i cuda-repo-ubuntu1704-9-0-local_9.0.176-1_amd64.deb
-sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
-sudo apt-get update
-sudo apt-get install cuda
+$ sudo dpkg -i cuda-repo-ubuntu1704-9-0-local_9.0.176-1_amd64.deb
+$ sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+$ sudo apt-get update
+$ sudo apt-get install cuda
 ```
 Use the Ubuntu software installer to install the two update patches (Double-click them as you did on Windows).
 
