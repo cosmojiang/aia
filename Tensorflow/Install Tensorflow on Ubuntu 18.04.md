@@ -64,9 +64,11 @@ Open the '~/.bashrc' file
 $ nano ~/.bashrc
 ```
 Add the following content to the end of the file
+```shell
 '# CUDA configuration
 export PATH=/usr/local/cuda-9.0/bin:${PATH:+${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}}
+```
 
 **Tensorflow installation**
 
