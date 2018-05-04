@@ -10,8 +10,9 @@ Please follow the official installation guideline or the page here https://linux
 
 Check available version of NVIDIA drivers and install a proper version (I used the 390). 
 ```shell
-$ ubuntu-drivers devices
-$ sudo apt install nvidia-driver-390
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+$ sudo apt update
+$ sudo apt install nvidia-390
 ```
 Reboot your computer (very important) and check your driver version
 ```shell
