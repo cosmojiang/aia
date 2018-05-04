@@ -8,7 +8,7 @@ Please follow the official installation guideline or the page here https://linux
 
 **NVIDIA driver installation**
 
-Check available version of NVIDIA drivers and install a proper version (I used the 390). 
+Install a custom version of nvidia driver (if you use the official package, you may need to follow the original post for installing the CUDA 9). 
 ```shell
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
 $ sudo apt update
