@@ -25,16 +25,24 @@ $ protoc --version # check the installed version
 
 **model_lib.py**
 If you use Python 3.X, you probably need to revise the following python scripts to run the latest tensorflow models (as of the version on 2018-07-13).
-  Line 282: revise losses_dict.itervalues() to losses_dict.values()
-  Line 391: revise eval_metric_ops.iteritems() to eval_metric_ops.items()
+  Line 282: 
+  ```python 
+  revise losses_dict.itervalues() to losses_dict.values()
+  ```
+  Line 391: 
+  ```python
+  revise eval_metric_ops.iteritems() to eval_metric_ops.items()
+  ```
 
 **utils/object_detection_evaluation.py**
 If you use Python 3.X, you probably need to revise the following python scripts to run the latest tensorflow models (as of the version on 2018-07-13).
   Line 842 to 844
+  ```python
   revise print 'Scores and tpfp per class label: {}'.format(class_index) to print('Scores and tpfp per class label: {0}'.format(class_index))
   revise print tp_fp_labels to print(tp_fp_labels)
   revise print scores to print(scores)
-
+  ```
+  
 **utils/learning_schedules.py**
 
 After installing the proper protobuf, you will successfully install the models and run its test builders. However, as of the writing, there is a small bug in the object_detection/utils/learning_schedules.py file, which throws errors when you train networks. 
