@@ -38,9 +38,26 @@ If you use Python 3.X, you probably need to revise the following python scripts 
 If you use Python 3.X, you probably need to revise the following python scripts to run the latest tensorflow models (as of the version on 2018-07-13).
   Line 842 to 844
   ```python
-  revise print 'Scores and tpfp per class label: {}'.format(class_index) to print('Scores and tpfp per class label: {0}'.format(class_index))
-  revise print tp_fp_labels to print(tp_fp_labels)
-  revise print scores to print(scores)
+  print 'Scores and tpfp per class label: {}'.format(class_index)
+  print tp_fp_labels
+  print scores
+  ```
+  to
+  ```python
+  print('Scores and tpfp per class label: {0}'.format(class_index))
+  print(tp_fp_labels)
+  print(scores)
+  ```
+
+**metrics/coco_tools.py**
+If you use Python 3.X, you probably need to revise the following python scripts to run the latest tensorflow models (as of the version on 2018-07-13).
+  Line 118:
+  ```python
+  results.dataset['categories'] = copy.deepcopy(self.dataset['categories'])
+  ```
+  to
+  ```python
+  results.dataset['categories'] = copy.deepcopy(list(self.dataset['categories']))
   ```
   
 **utils/learning_schedules.py**
